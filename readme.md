@@ -45,7 +45,7 @@ The file name will be the current date and time in the following format `11-07-2
 <br />
 <br />
 
-# Data infos
+## Data infos
 You will get following data:
 - objectId
 - fileName
