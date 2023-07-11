@@ -1,8 +1,8 @@
 # <img  src="https://i.ibb.co/cDxhM27/Gruppe-2.png"  alt="logo"  height="30"  />&nbsp;&nbsp;AMEML&nbsp;&nbsp;-&nbsp;&nbsp;Amazon Music Export My Library
 
-> A tool to export your Amazon Music Songs from "My Library"<br />
+> A performat single exe programm to export your Amazon Music Songs from "My Library" since this library is not a playlist so you normaly can't export it<br />
 > Works without active Amazon Music subscription<br />
-> FreeYourMusic friendly
+> [FreeYourMusic](https://freeyourmusic.com) friendly
 <br />
 
 ## Requirements
@@ -42,6 +42,29 @@ After the programm has gathered all necessary informations you can choose betwee
 
 After the programm is done the file will be saved in the current folder where the programm is located
 The file name will be the current date and time in the following format `11-07-2023T22-25.csv`
+<br />
+<br />
+
+## Performance
+Here are some benchmarks of the programm.
+<br />
+
+`Specs`<br />
+Windows 11 Home<br />
+Dell XPS 15 9500<br />
+CPU i7-10750H 2.60GHz<br />
+RAM 32GB<br />
+2352 Songs<br />
+<br />
+
+| Action                                    | Average time |
+| ----------------------------------------- | ------------ |
+| Parse CSV                                 | 216ms        |
+| To JSON                                   | 48ms         |
+| To CSV                                    | 2ms          |
+| Convert CSV<br />(FreeYourMusic Friendly) | 5ms          |
+> Since the data comes in as csv we need to parse it and then convert it to JSON or FreeYourMusic Friendly CSV<br />
+> For normal CSV the file is directly written without any further processing
 <br />
 <br />
 
@@ -100,8 +123,16 @@ You will get following data:
 - assetEligibility
 - eligibility
 - internalTags
+<br />
 
+In case of the normal CSV file you will get all these informations with the first line being the headers with exactly the same name.<br />
+For the JSON file you will get the same but a single array containing objects with all the key value pairs of the infos above.<br />
+For the FreeYourMusic friendly CSV format you will get only `name` (title), `artist` (artistName) and `album` (albumName) which will also decrease the file size.
 
+<br />
+<br />
 
 ### Disclaimer
 AMEML and the creator deadlinecode are not affiliated with Amazon Music and assumes no legal responsibility for the use of this programm.
+<br />
+Use at your own risk.
