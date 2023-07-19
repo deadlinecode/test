@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tmplt.maxbraun.dev/schema/v0.0.1/schema.json",
+  "manifest_version": "0.0.1",
+  "version": "0.0.1",
+  "name": "Vite",
+  "description": "Vite",
+  "author": "deadlinecode",
+  "platform": "Web",
+  "type": "Template",
+  "templateDir": "./template",
+  "runtime": "Node",
+  "runtimeVersion": "18.13.0",
+  "icon": "./icon.svg",
+  "userOptions": [
+    {
+      "title": "SASS",
+      "description": "Add SASS support",
+      "type": "checkbox",
+      "default": true,
+      "packages": [
+        {
+          "name": "sass",
+          "version": "^1.63.6",
+          "dev": true
+        }
+      ]
+    },
+    {
+      "title": "React Router Dom",
+      "description": "Add React Router Dom support",
+      "type": "checkbox",
+      "default": true,
+      "packages": [
+        {
+          "name": "react-router-dom",
+          "version": "^5.3.4",
+          "dev": true
+        } 
+      ]
+    }
+  ]
+}
